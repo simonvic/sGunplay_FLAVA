@@ -103,7 +103,7 @@ class cfgVehicles {
 			opticsZoomMax="0.3926/6";
 			opticsZoomInit="0.3926/6";
 			discretefov[] = {}; //sorry no double zoom :(
-			PPMaskProperties[] = {0.0, 0.0, 0.314, 0.01};
+			PPMaskProperties[] = {0.0, 0.0, 0.3, 0.01};
 			PPLensProperties[] = {0.5, 0.0, 0.0, 0.2};
 		};
 	};
@@ -246,6 +246,13 @@ class cfgVehicles {
 		s_recoilControlKick = 0.75;
 	};
 	class TF_PKM_CNCC39Bttstck : Inventory_Base {
+		s_recoilControlHandsX = 0.45;
+		s_recoilControlHandsY = 0.45;
+		s_recoilControlMisalignmentX = 0.20;
+		s_recoilControlMisalignmentY = 0.25;
+		s_recoilControlKick = 0.75;
+	};
+	class TF_M4_B5PrecisionBttstck : Inventory_Base {
 		s_recoilControlHandsX = 0.45;
 		s_recoilControlHandsY = 0.45;
 		s_recoilControlMisalignmentX = 0.20;
