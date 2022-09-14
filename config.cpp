@@ -43,6 +43,10 @@ class CfgPatches {
 			"TF_PKM_DTK1_Compensator",
 			"TF_PKM_SAICompensator",
 			"TF_PistolGrips_B",
+			"TF_Elcan_SpecterDR",
+			"TF_EOTech_XPS",
+			"TF_HAMR",
+			"TF_OTs_14_Groza_Optic",
 			"TF_AK_MVRIBttstck"
 		};
 	};
@@ -68,6 +72,51 @@ class CfgMods {
 };
 
 class cfgVehicles {
+	class ItemOptics;
+	class TF_OTs_14_GrozaOptic : ItemOptics {
+		isFullscreen = 1;
+		showEnterMisalignment = 1;
+		class OpticsInfo {
+			PPMaskProperties[] = {0.0, 0.0, 0.314, 0.01};
+			PPLensProperties[] = {0.314, 0.0, 0.0, 0.2};
+		};
+	};
+	class TF_HAMROptic : ItemOptics {
+		class OpticsInfo {
+			PPMaskProperties[] = {0.0, 0.0, 0.4, 0.01};
+			PPLensProperties[] = {0.314, 0.0, 0.0, 0.2};
+		};
+	};
+	class TF_ElcanSpecterDROptic_Base : ItemOptics {
+		class OpticsInfo {
+			opticsZoomMin="0.3926/4";
+			opticsZoomMax="0.3926/4";
+			opticsZoomInit="0.3926/4";
+			discretefov[] = {}; //sorry no double zoom :(
+			PPMaskProperties[] = {0.0, 0.0, 0.5, 0.01};
+			PPLensProperties[] = {0.314, 0.0, 0.0, 0.2};
+		};
+	};
+	class TF_ElcanSpecterDR_6xOptic_Base : ItemOptics {
+		class OpticsInfo {
+			opticsZoomMin="0.3926/6";
+			opticsZoomMax="0.3926/6";
+			opticsZoomInit="0.3926/6";
+			discretefov[] = {}; //sorry no double zoom :(
+			PPMaskProperties[] = {0.0, 0.0, 0.314, 0.01};
+			PPLensProperties[] = {0.5, 0.0, 0.0, 0.2};
+		};
+	};
+
+	class TF_EOTechXPSOptic_Base;
+	class TF_EOTechXPSOpticUp_Black : TF_EOTechXPSOptic_Base {
+		class OpticsInfo {
+			PPMaskProperties[] = {-0.005, 0.0, 0.7, 0.02};
+			PPLensProperties[] = {0.4, 0.005, 0.0, 0.2};
+		};
+	};
+	
+
 	class ItemSuppressor;
 	class TF_PKM_SAICompensator : ItemSuppressor {
 		s_recoilControlMisalignmentX = 0.45;
