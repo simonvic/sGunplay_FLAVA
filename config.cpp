@@ -315,7 +315,7 @@ class cfgVehicles {
 		s_recoilControlMisalignmentY = 0.25;
 		s_recoilControlKick = 0.75;
 	};
-	class TF_M4CraneBttstck : Inventory_Base {
+	class TF_M4CraneBttstck : TF_MAR10_Bttstck_Base {
 		s_recoilControlStabilityX = 0.45;
 		s_recoilControlStabilityY = 0.45;
 		s_recoilControlMisalignmentX = 0.20;
