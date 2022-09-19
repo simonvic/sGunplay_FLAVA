@@ -1,3 +1,32 @@
+class CfgMods {
+	class sGunplay_FLAVA {
+		dir = "simonvic/sGunplay_FLAVA";
+		picture = "";
+		action = "";
+		hideName = 1;
+		hidePicture = 1;
+		name = "sGunplay_FLAVA";
+		credits = "simonvic";
+		author = "simonvic";
+		authorID = "0";
+		version = "0.1";
+		extra = 0;
+		type = "mod";
+
+		dependencies[] = {
+			"World"
+		};
+		class defs {
+			class worldScriptModule {
+				value = "";
+				files[] = {
+					"simonvic/sGunplay_FLAVA/scripts/4_World"
+				};
+			};
+		};
+	};
+};
+
 class CfgPatches {
 	class sGunplay_FLAVA {
 		units[] = {};
@@ -49,25 +78,6 @@ class CfgPatches {
 			"TF_OTs_14_Groza_Optic",
 			"TF_AK_MVRIBttstck"
 		};
-	};
-};
-
-class CfgMods {
-	class sGunplay_FLAVA {
-		dir = "simonvic/sGunplay_FLAVA";
-		picture = "";
-		action = "";
-		hideName = 1;
-		hidePicture = 1;
-		name = "sGunplay_FLAVA";
-		credits = "simonvic";
-		author = "simonvic";
-		authorID = "0";
-		version = "0.1";
-		extra = 0;
-		type = "mod";
-
-		dependencies[] = {};
 	};
 };
 
