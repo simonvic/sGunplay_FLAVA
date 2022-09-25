@@ -82,48 +82,53 @@ class CfgPatches {
 };
 
 class cfgVehicles {
+	
 	class ItemOptics;
 	class TF_OTs_14_GrozaOptic : ItemOptics {
-		isFullscreen = 1;
-		showEnterMisalignment = 1;
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.314, 0.01};
-			PPLensProperties[] = {0.314, 0.0, 0.0, 0.2};
-		};
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 1.0;
+		s_pipMagnification = 0.314;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.2;
 	};
 	class TF_HAMROptic : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.4, 0.01};
-			PPLensProperties[] = {0.314, 0.0, 0.0, 0.2};
-		};
+		s_pipRadius = 0.4;
+		s_pipMagnification = 0.314;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.2;
 	};
 	class TF_ElcanSpecterDROptic_Base : ItemOptics {
+		s_pipRadius = 0.5;
+		s_pipMagnification = 0.314;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.2;
 		class OpticsInfo {
 			opticsZoomMin="0.3926/4";
 			opticsZoomMax="0.3926/4";
 			opticsZoomInit="0.3926/4";
 			discretefov[] = {}; //sorry no double zoom :(
-			PPMaskProperties[] = {0.0, 0.0, 0.5, 0.01};
-			PPLensProperties[] = {0.314, 0.0, 0.0, 0.2};
 		};
 	};
 	class TF_ElcanSpecterDR_6xOptic_Base : ItemOptics {
+		s_pipRadius = 0.3;
+		s_pipMagnification = 0.5;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.2;
 		class OpticsInfo {
 			opticsZoomMin="0.3926/6";
 			opticsZoomMax="0.3926/6";
 			opticsZoomInit="0.3926/6";
 			discretefov[] = {}; //sorry no double zoom :(
-			PPMaskProperties[] = {0.0, 0.0, 0.3, 0.01};
-			PPLensProperties[] = {0.5, 0.0, 0.0, 0.2};
 		};
 	};
 
 	class TF_EOTechXPSOptic_Base;
 	class TF_EOTechXPSOpticUp_Black : TF_EOTechXPSOptic_Base {
-		class OpticsInfo {
-			PPMaskProperties[] = {-0.005, 0.0, 0.7, 0.02};
-			PPLensProperties[] = {0.4, 0.005, 0.0, 0.2};
-		};
+		s_pipRadius = 0.7;
+		s_pipMagnification = 0.4;
+		s_pipBlur = 0.02;
+		s_pipChromAber = 0.2;
 	};
 	
 
@@ -489,13 +494,5 @@ class cfgVehicles {
 		s_recoilControlStabilityY = 0.20;
 		s_recoilControlMisalignmentX = 0.55;
 		s_recoilControlMisalignmentY = 0.50;
-	};
-	class TF_AR_Grip_Base : Inventory_Base {
-		s_recoilControlMisalignmentX = 0.05;
-		s_recoilControlMisalignmentY = 0.05;
-	};
-	class TF_AK_Grip_Base : Inventory_Base {
-		s_recoilControlMisalignmentX = 0.05;
-		s_recoilControlMisalignmentY = 0.05;
 	};
 };
